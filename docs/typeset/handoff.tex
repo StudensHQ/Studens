@@ -269,12 +269,23 @@ on all database-touching code having been read.
         deliberately on 2026-09-27, not forgotten: it needs a directory to
         register an application in, which a personal account does not have. It
         is the highest-value item here and nothing technical blocks it.
-  \item \textbf{No student has written a review.} Every review in the database
-        was written during testing. \textbf{Feedback is different and is now
-        real}: the public link went out on 2026-09-27 and messages arrived the
-        same evening, from people who are not the author. Those rows are the
-        first thing in this database that somebody else put there, so treat
-        them as data rather than as fixtures.
+  \item \textbf{One review was written by somebody outside the project}, and
+        the rest by us. Separately, a piece of feedback says the product helped
+        a reader build their PAE: that sentence is the v1 acceptance test, said
+        back by somebody with no reason to be kind about it. The feedback rows
+        are real too. Both are the only things in this database that came from
+        outside, so treat them as data rather than as fixtures.
+  \item \textbf{No date, course or account is written down for any of it, on
+        purpose.} This repository is public, and a dated trail of one person's
+        activity is exactly the link the whole FR-C design spends its effort
+        preventing. The figures live in the database, where somebody entitled
+        to see them can look.
+  \item \textbf{Most of the review data is seeded, and it does not announce
+        itself.} The rows carry dates spread across 2026, including months
+        before the project existed. Five anonymous reviews carry October dates
+        and read as recent use; they are not, because an anonymous review needs
+        a signed-in member at the moment it is sent and no session exists after
+        2026-09-28. Check the session table before believing a timestamp.
   \item \textbf{It is reachable only while a laptop is on.} Two tunnels point
         at a development server, and sign-in works on exactly one of them,
         because the public origin is a single value that has to match what was
