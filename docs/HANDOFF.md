@@ -276,12 +276,26 @@ Stated plainly, because a handover that lists only what works is a brochure.
   deliberately on 2026-09-27**, not forgotten: it needs a directory to register
   an application in, which a personal Microsoft account does not have. It is
   the highest-value thing on this list and nothing technical blocks it.
-- **No student has written a review.** Every review in the database was written
-  during testing. **Feedback is different and is now real:** the public link
-  went out on 2026-09-27 and messages started arriving the same evening,
-  through the panel and from people who were not the author. Those rows are the
-  first thing in this database that somebody else put there, so treat them as
-  data rather than as fixtures, and do not clear the table to tidy up.
+- **One review was written by somebody outside the project**, and the rest by
+  us. The one is not a rounding error, and separately a piece of feedback says
+  the product helped a reader build their PAE: that sentence is the v1
+  acceptance test, said back by somebody with no reason to be kind about it.
+  **The feedback rows are real too.** Both are the only things in this database
+  that came from outside, so treat them as data rather than as fixtures, and do
+  not clear either table to tidy up.
+- **No date, course or account is written down for any of it, on purpose.**
+  This repository is public. A dated trail of one person's activity is exactly
+  the link the whole FR-C design spends its effort preventing, and writing it
+  into a document would hand over for free what the schema refuses to store.
+  The figures live in the database, which is where somebody entitled to see
+  them can look.
+- **Most of the review data is seeded, and it does not announce itself.** The
+  rows carry dates spread across 2026, including months before the project
+  existed, so a script backdated them to make paging and the aggregate show
+  something. Five anonymous reviews carry October dates and read as recent use;
+  they are not. An anonymous review needs a signed-in member at the moment it is
+  sent, and no session exists after 2026-09-28. Check the session table before
+  believing a timestamp here.
 - **It is reachable only while a laptop is on.** Two tunnels point at a
   development server: one whose free tier shows a warning page once per
   visitor and cannot be made not to, one that shows none but whose address is
