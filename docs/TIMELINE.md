@@ -123,8 +123,12 @@ deployment), OPEN-41 (backup cadence, now a privacy parameter), OPEN-34
 ### Not yet done, and known
 
 - **Administrators are exempt from branch protection**, by decision on
-  2026-09-11. The rules bind `wilfred33`; they do not bind the owner. FR-B15
-  records the deviation and the two ways to close it.
+  2026-09-11. The rules bind the other collaborator; they do not bind the
+  owner. FR-B15 records the deviation and the two ways to close it. **The
+  exemption is kept deliberately** and was reaffirmed on 2026-11-01, alongside
+  the decision that the second collaborator does review: having somebody who
+  can approve is what makes the bypass exceptional again rather than the only
+  way to merge.
 - Only **EPL** is ingested. The crawl covers all 20 faculties; the module
   launches scoped, by decision.
 - `apps/worker` has the two CLIs and no queue. Moderation has no consumer yet.
@@ -2501,6 +2505,42 @@ warning was reported here as appearing on every request. It appears once per
 visitor: the test that said otherwise used a tool that runs no JavaScript and so
 could not keep what the page sets. The cost is one click per person, not per
 visit.
+
+
+---
+
+### Phase 59: an organisation, and somebody who can actually approve
+
+The repository moved to an organisation. Nothing in the code changed and one
+guarantee did, which is why this is a phase rather than a line in a changelog.
+
+**Review was the boundary and there was nobody to be it.** FR-B14 makes review
+the security control: every FR-C guarantee rests on all database-touching code
+having been read by somebody. With one person that meant self-review, which
+GitHub refuses outright, so merging meant the administrator bypass. It was used
+five times in a row on 2026-09-28, and FR-B15 says that exemption exists so a
+bypass is a deliberate visible act rather than a routine one. Five in a row is
+a routine.
+
+A second collaborator now holds write access and reviews. **The bypass is
+kept**, by decision rather than by neglect: the owner can still merge alone
+when nobody is available, which a one-person-plus-one project needs. The
+difference is that it is no longer the only road, so using it means choosing
+to, which is what FR-B15 asked for in the first place.
+
+**The collaborator named in phase 17 has stepped back**, on availability that
+was too uncertain to plan around. Recorded rather than quietly dropped: phase
+17 decided a whole workflow on the strength of there being two people, and a
+reader who meets that phase without this one would believe the wrong thing
+about who is here.
+
+**The move itself was silent, which is the part worth watching for.** The
+working copy still pointed at the old personal address for an unknown number
+of pushes, all of which succeeded through GitHub's redirect without saying so.
+It only surfaced on a force push, which prints the notice. A redirect holds
+until somebody creates a repository at the old name, and then it does not. The
+remote is repointed. If a push ever prints "This repository moved", that is the
+whole warning there will be.
 
 
 ---
